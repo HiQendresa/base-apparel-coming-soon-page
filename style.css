@@ -120,12 +120,14 @@ main .container .wrapper .content .title {
   font-family: var(--font-family);
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 42px;
   letter-spacing: 10.825px;
+  text-transform: uppercase;
 }
 main .container .wrapper .content .title span {
   color: #CE9898;
+  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   main .container .wrapper .content .title {
