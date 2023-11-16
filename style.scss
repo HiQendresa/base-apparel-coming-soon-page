@@ -51,6 +51,14 @@ picture {
 main {
     padding: 40px 20px;
     background: linear-gradient(150deg, #FFF 0%, #FFF4F4 84.51%);
+
+    @media screen and (min-width:768px) {
+        max-height: 874px;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-height: 885px;
+    }
     
     .container {
         display: flex;
@@ -61,8 +69,16 @@ main {
 
         @media screen and (min-width:768px) {
             flex-direction: column;
+            padding-left: 10px;
+            gap: 0;
+        }
+        @media screen and (min-width:1200px) {
+            flex-direction: column;
             padding-left: 150px;
 
+            background-image: url('./images/bg-pattern-desktop.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         .header {
@@ -184,6 +200,11 @@ main {
                         top: 0;
                         right: 0%;
                         
+                        @media screen and (min-width:768px) {
+                            width: 100px;
+                            height: 56px;
+                        }
+
                         img {
                             width: 19px;
                             height: 24px;

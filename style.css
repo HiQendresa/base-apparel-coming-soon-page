@@ -52,6 +52,16 @@ main {
   padding: 40px 20px;
   background: linear-gradient(150deg, #FFF 0%, #FFF4F4 84.51%);
 }
+@media screen and (min-width: 768px) {
+  main {
+    max-height: 874px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    max-height: 885px;
+  }
+}
 main .container {
   display: flex;
   flex-direction: column;
@@ -62,7 +72,17 @@ main .container {
 @media screen and (min-width: 768px) {
   main .container {
     flex-direction: column;
+    padding-left: 10px;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .container {
+    flex-direction: column;
     padding-left: 150px;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 main .container .header {
@@ -186,6 +206,12 @@ main .container .wrapper .content form button {
   position: absolute;
   top: 0;
   right: 0%;
+}
+@media screen and (min-width: 768px) {
+  main .container .wrapper .content form button {
+    width: 100px;
+    height: 56px;
+  }
 }
 main .container .wrapper .content form button img {
   width: 19px;
