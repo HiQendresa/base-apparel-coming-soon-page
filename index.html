@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css"  href="./style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+  </style>
   
   <title>Base Apparel coming soon page</title>
 
@@ -25,11 +28,13 @@
             Hello fellow shoppers! We're currently building our new fashion store. 
             Add your email below to stay up-to-date with announcements and our launch deals.
           </div>
-          <form action="submit">
-            <input type="email" name="email" id="email" placeholder="Email Address">
+          <form action="submit" class="form" type="submit" value="Submit">
+            <input id="emailInput" placeholder="Email Address">
             <button type="submit">
-              <img src="./images/icon-arrow.svg" alt="icon-arrow" class="arrow-icon"></button>
-              <img src="./images/icon-error.svg" alt="icon-error" class="error-icon"></button>
+              <img src="./images/icon-arrow.svg" alt="icon-arrow" class="arrow-icon" id="emailInput">
+              <img src="./images/icon-error.svg" alt="icon-error" class="error-icon" id="emailError">
+            </button>
+            <p class="error-message">Please provide a valid email</p>
           </form>
         </div>
         <div class="image-container">
@@ -42,7 +47,25 @@
     </div>
   </main>
   
-  
+  <script>
+      const input = document.querySelector('#emailInput');
+      const error = document.querySelector('#emailError');
+      const errormsg = document.querySelector('.error-message');
+
+    document.querySelector('.form').addEventListener("submit", (event) => {
+      event.preventDefault();
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      console.log('hello', emailRegex.test(input.value));
+
+      if (!emailRegex.test(input.value)) {
+        error.style.display = "block";
+        errormsg.style.display = "block";
+      } else {
+        error.style.display = "none";
+        errormsg.style.display = "none";
+      }
+    });
+  </script>
   
 </body>
 </html>

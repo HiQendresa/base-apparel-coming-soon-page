@@ -1,6 +1,5 @@
 :root {
-  --very-dark-blue: hsl(234, 12%, 34%);
-  --font-family: "Poppins", sans-serif;
+  --font-family: "Josefin Sans", sans-serif;
 }
 
 *,
@@ -60,6 +59,7 @@ main {
 @media screen and (min-width: 1200px) {
   main {
     max-height: 885px;
+    padding: 0;
   }
 }
 main .container {
@@ -79,7 +79,7 @@ main .container {
 @media screen and (min-width: 1200px) {
   main .container {
     flex-direction: column;
-    padding-left: 150px;
+    padding: 60px 40px 0px 150px;
     background-image: url("./images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -117,7 +117,7 @@ main .container .wrapper .content .title {
   width: 311px;
   color: #423A3A;
   text-align: center;
-  font-family: Josefin Sans;
+  font-family: var(--font-family);
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -141,7 +141,7 @@ main .container .wrapper .content .description {
   width: 311px;
   color: #CE9898;
   text-align: center;
-  font-family: Josefin Sans;
+  font-family: var(--font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -165,12 +165,12 @@ main .container .wrapper .content form input {
   border: 1px solid #CE9898;
   outline: none;
   opacity: 0.5;
-  padding: 0 18px;
+  padding: 0 25px;
   position: relative;
 }
 main .container .wrapper .content form input ::-moz-placeholder {
   color: #CE9898;
-  font-family: Josefin Sans;
+  font-family: var(--font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -179,7 +179,7 @@ main .container .wrapper .content form input ::-moz-placeholder {
 }
 main .container .wrapper .content form input ::placeholder {
   color: #CE9898;
-  font-family: Josefin Sans;
+  font-family: var(--font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -206,6 +206,11 @@ main .container .wrapper .content form button {
   position: absolute;
   top: 0;
   right: 0%;
+  cursor: pointer;
+}
+main .container .wrapper .content form button:hover, main .container .wrapper .content form button:focus {
+  background: rgba(198, 110, 110, 0.5);
+  box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
 }
 @media screen and (min-width: 768px) {
   main .container .wrapper .content form button {
@@ -218,7 +223,22 @@ main .container .wrapper .content form button img {
   height: 24px;
 }
 main .container .wrapper .content form .error-icon {
-  display: none !important;
+  display: none;
+  position: absolute;
+  top: 31%;
+  left: -29px;
+  height: 20px;
+}
+main .container .wrapper .content form .error-message {
+  color: #F96464;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  padding-left: 25px;
+  padding-top: 10px;
+  display: none;
 }
 main .container .wrapper .image-container {
   width: 350px;
