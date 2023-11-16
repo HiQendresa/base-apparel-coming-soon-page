@@ -118,17 +118,18 @@ main {
                     font-size: 40px;
                     font-style: normal;
                     font-weight: bold;
-                    line-height: 42px;
+                    line-height: 70px;
                     letter-spacing: 10.825px;
                     text-transform: uppercase;
                     
                     span {
                         color: #CE9898;
+                        font-weight: 300;
                     }
                     @media screen and (min-width:768px) {
                         width: 444px;
                         font-size: 64px;
-                        font-weight: 300;
+                        font-weight: bold;
                         line-height: 64px;
                         letter-spacing: 17.321px;
                         text-align: left;
