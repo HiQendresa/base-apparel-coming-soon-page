@@ -127,7 +127,6 @@ main .container .wrapper .content .title {
 }
 main .container .wrapper .content .title span {
   color: #CE9898;
-  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   main .container .wrapper .content .title {
